@@ -48,6 +48,8 @@ add-migration -context MovieManagementContext
 
 Name: VideoStoreMDB 
 
+* update database 
+
 update-database
 
 

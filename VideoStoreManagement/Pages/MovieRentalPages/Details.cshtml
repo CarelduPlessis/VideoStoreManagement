@@ -1,0 +1,52 @@
+﻿@page
+@model VideoStoreManagement.Pages.MovieRentalPages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+    <div class="container">
+        <main role="main" class="pb-3">
+            <h1>Details</h1>
+
+            <div>
+                <h4>MovieRental</h4>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MovieRental.DateIsued)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MovieRental.DateIsued)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MovieRental.DateReterned)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MovieRental.DateReterned)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MovieRental.IsMovieLateReturned)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MovieRental.IsMovieLateReturned)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MovieRental.movie)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MovieRental.movie.Title)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MovieRental.customer)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MovieRental.customer.FullName)
+                    </dd>
+                </dl>
+            </div>
+            <div>
+                <a asp-page="./Edit" asp-route-id="@Model.MovieRental.Id">Edit</a> |
+                <a asp-page="./Index">Back to List</a>
+            </div>
+        </main>
+    </div>

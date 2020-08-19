@@ -1,0 +1,55 @@
+﻿@page
+@model VideoStoreManagement.Pages.MovieRentalPages.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+    <div class="container">
+        <main role="main" class="pb-3">
+            <h1>Delete</h1>
+
+            <h3>Are you sure you want to delete this?</h3>
+            <div>
+                <h4>MovieRental</h4>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MovieRental.DateIsued)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MovieRental.DateIsued)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MovieRental.DateReterned)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MovieRental.DateReterned)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MovieRental.IsMovieLateReturned)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MovieRental.IsMovieLateReturned)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MovieRental.movie)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MovieRental.movie.Title)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MovieRental.customer)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MovieRental.customer.Address)
+                    </dd>
+                </dl>
+
+                <form method="post">
+                    <input type="hidden" asp-for="MovieRental.Id" />
+                    <input type="submit" value="Delete" class="btn btn-danger" /> |
+                    <a asp-page="./Index">Back to List</a>
+                </form>
+            </div>
+        </main>
+    </div>

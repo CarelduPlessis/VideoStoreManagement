@@ -46,7 +46,7 @@ add-migration -context MovieManagementContext
 
 * Give Name to database 
 
-Name: MovieDB
+Name: VideoStoreMDB 
 
 update-database
 

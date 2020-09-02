@@ -53,6 +53,20 @@ Name: VideoStoreMDB
 update-database
 
 
+* Edit the database that the foreign keys to restrict in order to prevent records from being deleted when they are referenced in another table.
+
+
+Change The Shared Layout
+
+* Same of the styles used in the Shared Layout is cut and pased in the these pages: 
+
+CustomerPages, 
+
+MoviePages, 
+
+MovieRentalPages.
+
+Note: As you Navigate in the CRUD pages you will find that they share the same style.
 
 
 

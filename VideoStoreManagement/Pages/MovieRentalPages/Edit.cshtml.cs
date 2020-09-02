@@ -38,6 +38,7 @@ namespace VideoStoreManagement.Pages.MovieRentalPages
             {
                 return NotFound();
             }
+           // replace ID value with FullName and Title to be display in the dropdown menu
            ViewData["CustomerFK"] = new SelectList(_context.Customer, "Id", "FullName");
            ViewData["MovieFK"] = new SelectList(_context.Movie, "Id", "Title");
             return Page();
